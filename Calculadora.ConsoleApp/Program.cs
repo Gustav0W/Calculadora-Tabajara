@@ -18,15 +18,41 @@
                 Console.WriteLine("2- Subtrair");
                 Console.WriteLine("3- Multiplicar");
                 Console.WriteLine("4- Divisão");
+                Console.WriteLine("5- Tabuada");
                 Console.WriteLine("S- Sair");
 
                 Console.Write("Resposta: ");
                 opcao = Console.ReadLine().ToUpper();
+
+
                 if (opcao == "S")
                 {
                     break;
                 }
-                Console.Write("Digite o primeiro número: ");
+                else if (opcao == "5")
+                {
+                    Console.WriteLine("==========================");
+                    Console.WriteLine("          TABUADA         ");
+                    Console.WriteLine("==========================");
+
+
+                    Console.Write("Digite um número: ");
+                    int numeroTabuada = Convert.ToInt32(Console.ReadLine());
+
+                    for (int contador = 1; contador <= 10; contador++) 
+                    {
+                        int resultadoTabuada = numeroTabuada * contador;
+
+                        Console.WriteLine($"{numeroTabuada} x {contador} = {resultadoTabuada}");
+                        
+                    }
+                    Console.ReadLine();
+                    continue;
+
+                }
+
+
+                    Console.Write("Digite o primeiro número: ");
                 string primeiroNumeroString = Console.ReadLine();
                 decimal primeiroNumero = Convert.ToDecimal(primeiroNumeroString);
 
@@ -50,8 +76,16 @@
                 }
                 else if (opcao == "4")
                 {
-                    resultado = primeiroNumero / segundoNumero;
+                    if (segundoNumero == 0)
+                    {
+                        Console.WriteLine("Não da de dividir número por 0 patrão(oa)... Aperte Enter para tentar novamente");
+                        Console.ReadLine();
+                        continue;
+                    }
+                        resultado = primeiroNumero / segundoNumero;
                 }
+                    
+                    
                     Console.WriteLine("==========================");
                 Console.WriteLine("Resultado: " + resultado.ToString("F2"));
                 Console.WriteLine("==========================");
