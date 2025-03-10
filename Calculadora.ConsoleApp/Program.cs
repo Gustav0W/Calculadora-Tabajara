@@ -4,10 +4,13 @@
     {
         static void Main(string[] args)
         {
-            string opcao;
+
+            int sessao = -1;
+            string[] operacoes = new string[100];
 
             while (true)
             {
+                sessao++;
                 Console.Clear();
 
                 Console.WriteLine("=================================");
@@ -19,10 +22,11 @@
                 Console.WriteLine("3- Multiplicar");
                 Console.WriteLine("4- Divisão");
                 Console.WriteLine("5- Tabuada");
+                Console.WriteLine("6- Histórico");
                 Console.WriteLine("S- Sair");
 
                 Console.Write("Resposta: ");
-                opcao = Console.ReadLine().ToUpper();
+                string opcao = Console.ReadLine().ToUpper();
 
 
                 if (opcao == "S")
@@ -31,10 +35,11 @@
                 }
                 else if (opcao == "5")
                 {
+
                     Console.WriteLine("==========================");
                     Console.WriteLine("          TABUADA         ");
                     Console.WriteLine("==========================");
-
+                   
 
                     Console.Write("Digite um número: ");
                     int numeroTabuada = Convert.ToInt32(Console.ReadLine());
@@ -46,32 +51,43 @@
                         Console.WriteLine($"{numeroTabuada} x {contador} = {resultadoTabuada}");
                         
                     }
-                    Console.ReadLine();
+                    Console.ReadKey();
                     continue;
-
+                }
+                else if (opcao == "6")
+                {
+                    foreach(var item in operacoes)
+                    {
+                        if (item is not null)
+                            Console.WriteLine(item);
+                    }
+                    Console.ReadKey();
+                    continue;
                 }
 
-
                     Console.Write("Digite o primeiro número: ");
-                string primeiroNumeroString = Console.ReadLine();
-                decimal primeiroNumero = Convert.ToDecimal(primeiroNumeroString);
+                   string primeiroNumeroString = Console.ReadLine();
+                   decimal primeiroNumero = Convert.ToDecimal(primeiroNumeroString);
 
-                Console.Write("Digite o segundo número: ");
-                string segundoNumeroString = Console.ReadLine();
-                decimal segundoNumero = Convert.ToDecimal(segundoNumeroString);
+                   Console.Write("Digite o segundo número: ");
+                   string segundoNumeroString = Console.ReadLine();
+                   decimal segundoNumero = Convert.ToDecimal(segundoNumeroString);
 
                 decimal resultado = 0;
 
                 if (opcao == "1")
                 {
                     resultado = primeiroNumero + segundoNumero;
+                    operacoes[sessao] = $"{primeiroNumero} + {segundoNumero} = {resultado}";
                 }
                 else if (opcao == "2")
                 {
                     resultado = primeiroNumero - segundoNumero;
+                    operacoes[sessao] = $"{primeiroNumero} - {segundoNumero} = {resultado}";
                 }
                 else if (opcao == "3")
                 {
+                    operacoes[sessao] = $"{primeiroNumero} * {segundoNumero} = {resultado}";
                     resultado = primeiroNumero * segundoNumero;
                 }
                 else if (opcao == "4")
@@ -82,11 +98,11 @@
                         Console.ReadLine();
                         continue;
                     }
-                        resultado = primeiroNumero / segundoNumero;
+                    resultado = primeiroNumero / segundoNumero;
+                    operacoes[sessao] = $"{primeiroNumero} / {segundoNumero} = {resultado}";
                 }
-                    
-                    
-                    Console.WriteLine("==========================");
+
+                Console.WriteLine("==========================");
                 Console.WriteLine("Resultado: " + resultado.ToString("F2"));
                 Console.WriteLine("==========================");
                 Console.Write("Deseja continuar ?(S/N): ");
@@ -95,6 +111,7 @@
                 if (opcaoContinuar != "S")
                 {
                     break;
+
                 }
 
             }
