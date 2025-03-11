@@ -5,12 +5,11 @@
         static void Main(string[] args)
         {
 
-            int sessao = -1;
+            int sessao = 0;
             string[] operacoes = new string[100];
 
             while (true)
             {
-                sessao++;
                 Console.Clear();
 
                 Console.WriteLine("=================================");
@@ -101,6 +100,7 @@
                     resultado = primeiroNumero / segundoNumero;
                     operacoes[sessao] = $"{primeiroNumero} / {segundoNumero} = {resultado}";
                 }
+                sessao++;
 
                 Console.WriteLine("==========================");
                 Console.WriteLine("Resultado: " + resultado.ToString("F2"));
