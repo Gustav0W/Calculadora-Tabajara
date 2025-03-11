@@ -87,8 +87,8 @@
                 }
                 else if (opcao == "3")
                 {
-                    operacoes[sessao] = $"{primeiroNumero} * {segundoNumero} = {resultado}";
                     resultado = primeiroNumero * segundoNumero;
+                    operacoes[sessao] = $"{primeiroNumero} * {segundoNumero} = {resultado}";
                 }
                 else if (opcao == "4")
                 {
