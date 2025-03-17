@@ -59,7 +59,7 @@
 
         static bool OpcaoTabuadaFoiEscolhida(string opcao)
         {
-           bool opcaoTabuadaFoiEscolhida = opcao == "S";
+           bool opcaoTabuadaFoiEscolhida = opcao == "5";
 
             return opcaoTabuadaFoiEscolhida;
         }
