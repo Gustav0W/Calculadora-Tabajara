@@ -2,24 +2,29 @@
 
 ![](https://i.imgur.com/ehh1jfT.gif)
 
-## Introdução
+## IntroduÃ§Ã£o
 
-É uma calculadora que consegue fazer as 4 operações matemáticas e mostrar a tabuada, incrível.
+Ã‰ uma calculadora que consegue fazer as 4 operaÃ§Ãµes matemÃ¡ticas e mostrar a tabuada, incrÃ­vel.
 
 ## Funcionalidades
 
-- **Operações básicas**: Realize somas, subtrações, multiplicações, divisões e veja a tabuada de qualquer número.
-- **Suporte a decimais**: Trabalhe com números de até duas casas decimais, não arredonda.
-- **Entradas validadas**: A calculadora garante que apenas opções válidas sejam aceitas.
-- **Tratamento de divisão por zero**: A calculadora identifica e valida erros de divisão por zero.
-- **Histórico de operações**: Ela também armazena o histórico de operações!
+- **OperaÃ§Ãµes bÃ¡sicas**: Realize somas, subtraÃ§Ãµes, multiplicaÃ§Ãµes, divisÃµes e veja a tabuada de qualquer nÃºmero.
+- **Suporte a decimais**: Trabalhe com nÃºmeros de atÃ© duas casas decimais, nÃ£o arredonda.
+- **Entradas validadas**: A calculadora garante que apenas opÃ§Ãµes vÃ¡lidas sejam aceitas.
+- **Tratamento de divisÃ£o por zero**: A calculadora identifica e valida erros de divisÃ£o por zero.
+- **HistÃ³rico de operaÃ§Ãµes**: Ela tambÃ©m armazena o histÃ³rico de operaÃ§Ãµes!
 
 ## Como Utilizar
 
-1. Clone o repositório ou baixe o código fonte.
-2. Abra o terminal ou o prompt de comando e navegue até a pasta raíz.
-3. Utilize o comando abaixo para restaurar as dependências do projeto.
-
+1. Clone o repositÃ³rio ou baixe o cÃ³digo fonte.
+```
+git clone https://github.com/Gustav0W/Calculadora-Tabajara
+```
+2. Abra o terminal ou o prompt de comando e navegue atÃ© a pasta raÃ­z.
+```
+cd Calculadora-Tabajara
+```
+3. Utilize o comando abaixo para restaurar as dependÃªncias do projeto.
 ```
 dotnet restore
 ```
@@ -33,7 +38,7 @@ dotnet build --configuration Release
 dotnet run
 ```
 
-6. Você verá esse terminal:
+6. VocÃª verÃ¡ esse terminal:
 ```
 Console.WriteLine("=================================");
 Console.WriteLine("    Calculadora Tabajara 2025    ");
@@ -42,8 +47,8 @@ Console.WriteLine("=================================");
 Console.WriteLine("1- Somar");
 Console.WriteLine("2- Subtrair");
 Console.WriteLine("3- Multiplicar");
-Console.WriteLine("4- Divisão");
+Console.WriteLine("4- DivisÃ£o");
 Console.WriteLine("5- Tabuada");
-Console.WriteLine("6- Histórico");
+Console.WriteLine("6- HistÃ³rico");
 Console.WriteLine("S- Sair");
 ```
